@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/35fa0d5144.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>☀️ weather</title>
+  </head>
+  <link rel="stylesheet" href="src/styles.css" />
+  <body>
+    <div class="container">
+      <div class="row other-cities">
+        <div class="col-2">Dublin</div>
+        <div class="col-2">New York</div>
+        <div class="col-2">Tokyo</div>
+      </div>
+      <form id=city-form>
+        <div class="row">
+          <div class="col-8">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control shadow-sm"
+                placeholder="Type a city"
+                id=city-input
+              />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary shadow-sm">Search</button>
+              <button type="current" class="btn btn-outline-success" id=current-button>Current</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="row current-city">
+        <div class="col-2">
+          <h4><strong id="current-city">Stuttgart</strong></h4>
+          <ul>
+            <li id= current-time></li>
+            <li id= current-date></li>
+          </ul>
+          <i class="fas fa-cloud current-weather-icon"></i>
+        </div>
+        <div class="col-4 current-temperature">
+          <ul>
+            <li><h5>Cloudy</h5></li>
+            <li><h5><span id="current-degrees">19°</span><span><a href="" id="celsius">C</a>|<a href="" id="fahrenheit" >F</a></span></h5></li>
+          </ul>
+        </div>
+        <div class="col-4 conditions">
+          <ul>
+            <li id="hum">Humidity: 60%</li>
+            <li id= "wind">Wind: 8 km/h</li>
+        </div>
+      </div>
+      <div class="row upcoming-week">
+        <div class="col-2">
+          Tue <br /><i class="fas fa-cloud upcoming-weather-icon"></i
+          ><br />20°|13°
+        </div>
+        <div class="col-2">
+          Wed <br /><i class="fas fa-cloud upcoming-weather-icon"></i
+          ><br />20°|13°
+        </div>
+        <div class="col-2">
+          Thu<br /><i class="fas fa-cloud upcoming-weather-icon"></i
+          ><br />20°|13°
+        </div>
+        <div class="col-2">
+          Fri <br /><i class="fas fa-cloud-sun upcoming-weather-icon"></i
+          ><br />22°|14°
+        </div>
+        <div class="col-2">
+          Sat <br /><i class="fas fa-sun upcoming-weather-icon"></i
+          ><br />23°|14°
+        </div>
+        <div class="col-2">
+          Sun <br /><i class="fas fa-cloud-sun upcoming-weather-icon"></i
+          ><br />22°|13°
+        </div>
+      </div>
+    </div><script src="src/script.js"></script>
+  </body>
+</html>

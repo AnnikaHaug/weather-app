@@ -1,0 +1,47 @@
+body {
+  display: block;
+  margin: 20px auto;
+  font-family: "PT Mono", monospace;
+  border: 1px solid rgb(158, 158, 158);
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(158, 158, 158, 0.4);
+  width: 850px;
+  padding: 30px 20px;
+}
+.other-cities {
+  padding: 10px 20px 20px 20px;
+}
+.mb-3 {
+  padding: 0px 0px 0px 20px;
+}
+.current-city {
+  padding: 25px 20px 20px 20px;
+}
+.current-weather-icon {
+  font-size: 60px;
+  padding: 8px 20px 10px 0px;
+  opacity: 0.8;
+}
+.current-temperature {
+  padding: 145px 0px 0px 28px;
+}
+.conditions {
+  padding: 155px 0px 0px 32px;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0, 0, 20px, 0;
+  padding: 0;
+}
+
+.upcoming-week {
+  margin: 0px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
+  text-align: center;
+}
+.upcoming-weather-icon {
+  font-size: 25px;
+  opacity: 0.8;
+  padding: 5px 0px 5px 0px;
+}
