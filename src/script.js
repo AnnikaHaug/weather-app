@@ -90,6 +90,9 @@ function showTemperature(response) {
   let currentWind = document.querySelector("#wind");
   currentWind.innerHTML = `Wind: ${response.data.wind.speed} km/h`;
 
+  let weatherCondition = document.querySelector("#weather-condition");
+  weatherCondition.innerHTML = response.data.weather[0].main;
+
   doItForTheCity(
     response.data.name,
     response.data.sys.country,
