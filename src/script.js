@@ -51,7 +51,7 @@ function doItForTheCity(city, country, timezone) {
 
   inputCity.innerHTML = `${
     city.slice(0, 1).toUpperCase() + city.slice(1)
-  }, ${country}`;
+  },${country}`;
   cityTime.innerHTML = `${day}, ${hourTime}:${minutesTime}`;
   cityDate.innerHTML = `${date}.${month}.${year}`;
 }

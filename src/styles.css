@@ -19,7 +19,7 @@
 }
 .current-weather-icon {
   font-size: 60px;
-  padding: 8px 20px 10px 0px;
+  padding: 8px 20px 10px 15px;
   opacity: 0.8;
 }
 .current-temperature {
