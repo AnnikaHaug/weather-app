@@ -25,6 +25,9 @@
 .current-temperature {
   padding: 145px 0px 0px 28px;
 }
+.celsius-fahrenheit {
+  font-size: 16px;
+}
 .conditions {
   padding: 155px 0px 0px 32px;
 }
