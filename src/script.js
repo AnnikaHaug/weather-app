@@ -51,7 +51,7 @@ function doItForTheCity(city, country, timezone) {
 
   inputCity.innerHTML = `${
     city.slice(0, 1).toUpperCase() + city.slice(1)
-  },${country}`;
+  }, ${country}`;
   cityTime.innerHTML = `${day}, ${hourTime}:${minutesTime}`;
   cityDate.innerHTML = `${date}.${month}.${year}`;
 }
@@ -84,6 +84,13 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let temp = document.querySelector("#current-degrees");
   temp.innerHTML = `${temperature}° `;
+
+  let weatherIcon = document.querySelector("#weather-icon");
+  weatherIcon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
 
   let currentHumidity = document.querySelector("#hum");
   currentHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;

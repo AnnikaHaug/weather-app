@@ -31,7 +31,7 @@
         <div class="col-2">New York</div>
         <div class="col-2">Tokyo</div>
       </div>
-      <form id=city-form>
+      <form id="city-form">
         <div class="row">
           <div class="col-8">
             <div class="mb-3">
@@ -39,14 +39,22 @@
                 type="text"
                 class="form-control shadow-sm"
                 placeholder="Type a city"
-                id=city-input
+                id="city-input"
               />
             </div>
           </div>
           <div class="col-4">
             <div class="mb-3">
-              <button type="submit" class="btn btn-primary shadow-sm">Search</button>
-              <button type="current" class="btn btn-outline-success" id=current-button>Current</button>
+              <button type="submit" class="btn btn-primary shadow-sm">
+                Search
+              </button>
+              <button
+                type="current"
+                class="btn btn-outline-success"
+                id="current-button"
+              >
+                Current
+              </button>
             </div>
           </div>
         </div>
@@ -55,22 +63,35 @@
         <div class="col-4">
           <h4><strong id="current-city">Stuttgart</strong></h4>
           <ul>
-            <li id= current-time></li>
-            <li id= current-date></li>
+            <li id="current-time"></li>
+            <li id="current-date"></li>
           </ul>
-          <br>
-          <i class="fas fa-cloud current-weather-icon"></i>
+        </div>
+      </div>
+      <div class="row icon-temp-con">
+        <div class="col-2 image">
+          <img src="" alt="" id="weather-icon" class="current-weather-icon" />
         </div>
         <div class="col-4 current-temperature">
           <ul>
             <li><h5 id="weather-condition">Cloudy</h5></li>
-            <li><h5><span id="current-degrees">19°</span><span class="celsius-fahrenheit"><a href="" id="celsius">C</a>|<a href="" id="fahrenheit" >F</a></span></h5></li>
+            <li>
+              <h5>
+                <span id="current-degrees">19°</span
+                ><span class="celsius-fahrenheit"
+                  ><a href="" id="celsius">C</a>|<a href="" id="fahrenheit"
+                    >F</a
+                  ></span
+                >
+              </h5>
+            </li>
           </ul>
         </div>
         <div class="col-4 conditions">
           <ul>
             <li id="hum">Humidity: 60%</li>
-            <li id= "wind">Wind: 8 km/h</li>
+            <li id="wind">Wind: 8 km/h</li>
+          </ul>
         </div>
       </div>
       <div class="row upcoming-week">
@@ -100,8 +121,11 @@
         </div>
       </div>
     </div>
-    <br>
-    <div class="open-source"><a href="https://github.com/AnnikaHaug/weather-app">Open-source code</a> by Annika Haug</div>
+    <br />
+    <div class="open-source">
+      <a href="https://github.com/AnnikaHaug/weather-app">Open-source code</a>
+      by Annika Haug
+    </div>
     <script src="src/script.js"></script>
   </body>
 </html>
