@@ -26,8 +26,19 @@
   padding: 20px 0px 0px 40px;
 }
 .celsius-fahrenheit {
-  font-size: 17px;
+  font-size: 16px;
 }
+a {
+  text-decoration: none;
+}
+.current-temperature .active {
+  color: black;
+  cursor: default;
+}
+.current-temperature .active:hover {
+  text-decoration: none;
+}
+
 .conditions {
   padding: 30px 0px 0px 0px;
 }

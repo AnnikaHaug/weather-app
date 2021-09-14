@@ -64,16 +64,25 @@ doItForTheCity("Stuttgart", "DE", 0);
 function celsiusClick(event) {
   event.preventDefault();
   let degrees = document.querySelector("#current-degrees");
-  degrees.innerHTML = "19°";
-}
 
+  unitCelsius.classList.add("active");
+  unitFahrenheit.classList.remove("active");
+
+  degrees.innerHTML = `${Math.round(celsiusTemperature)} `;
+}
+let celsiusTemperature = null;
 let unitCelsius = document.querySelector("#celsius");
 unitCelsius.addEventListener("click", celsiusClick);
 
 function fahrenheitClick(event) {
   event.preventDefault();
   let degrees = document.querySelector("#current-degrees");
-  degrees.innerHTML = "66°";
+
+  unitCelsius.classList.remove("active");
+  unitFahrenheit.classList.add("active");
+
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  degrees.innerHTML = `${Math.round(fahrenheitTemperature)} `;
 }
 
 let unitFahrenheit = document.querySelector("#fahrenheit");
@@ -81,9 +90,11 @@ unitFahrenheit.addEventListener("click", fahrenheitClick);
 
 //API Call
 function showTemperature(response) {
+  celsiusTemperature = Math.round(response.data.main.temp);
+
   let temperature = Math.round(response.data.main.temp);
   let temp = document.querySelector("#current-degrees");
-  temp.innerHTML = `${temperature}° `;
+  temp.innerHTML = `${temperature} `;
 
   let weatherIcon = document.querySelector("#weather-icon");
   weatherIcon.setAttribute(
