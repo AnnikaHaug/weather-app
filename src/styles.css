@@ -58,6 +58,9 @@ li {
   opacity: 0.8;
   width: 50%;
 }
+.weather-forecast-temperature-min {
+  color: rgba(56, 56, 56, 0.589);
+}
 .open-source {
   display: block;
   text-align: center;

@@ -60,6 +60,35 @@ let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", eventCity);
 doItForTheCity("Stuttgart", "DE", 0);
 
+//Forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col-2">
+    <div class="weather-forecast-date">${day}</div>
+    <img
+      src="https://openweathermap.org/img/wn/02d@2x.png"
+      alt=""
+      class="upcoming-weather-icon"
+    />
+    <div class_="weather-forecast-temperature">
+      <span class="weather-forecast-temperature-max">18°</span>
+      <span class="weather-forecast-temperature-min">12°</span>
+    </div>
+  </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //Celsius vs Fahrenheit
 function celsiusClick(event) {
   event.preventDefault();
@@ -116,6 +145,8 @@ function showTemperature(response) {
     response.data.sys.country,
     response.data.timezone
   );
+
+  displayForecast();
 }
 
 function currentCity() {
